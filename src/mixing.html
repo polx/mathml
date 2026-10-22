@@ -248,7 +248,10 @@
   &lt;mi arg="exp">n&lt;/mi>
 &lt;/msup>
 </pre>
-<blockquote>x to the n-th power<br/> x to the n-th power</blockquote>
+<blockquote>
+de: x hoch n<br/>
+en: x to the n-th power<br/>
+fr: x à la puissance n</blockquote>
 </div>
 <div class="example mathml mmlcore">
 <pre>
@@ -257,7 +260,15 @@
   &lt;mi arg="op" intent="transpose">T&lt;/mi>
 &lt;/msup>
 </pre>
-<blockquote>A transpose<br/> A transpose </blockquote>
+<blockquote>
+ar: a منقولة مصفوفة<br/>
+de: groß a transponiert<br/>
+en: A superscript T end superscript<br/>
+en: A transposed<br/>
+pl: wielka a transponowane<br/>
+vn: a  ma trận chuyển vị<br/>
+gr: κεφαλαίο a ανάστροφος
+</blockquote>
 </div>
 <div class="example mathml mmlcore">
 <pre>
@@ -275,15 +286,12 @@
   &lt;mo>&#x2032;&lt;/mo>
 &lt;/msup>
 </pre>
-<blockquote>x prime<br/> x prime</blockquote>
+<blockquote>all languages: x prime</blockquote>
 </div>
 
-     <p class="ednote">mathcat gets transpose even without intent</p>
+       <p>Similarly an over bar may represent complex conjugation, or mean (average), again with possible readings with and without <code class="attribute">intent</code>:</p>
 
-
-    <p>Similarly an over bar may represent complex conjugation, or mean (average), again with possible readings with and without <code class="attribute">intent</code>:</p>
-
- <div class="example mathml mmlcore">
+       <div class="example mathml mmlcore">
 <pre>
 &lt;mover intent="conjugate($v)"&gt;
   &lt;mi arg="v"&gt;z&lt;/mi&gt;
@@ -295,10 +303,74 @@
   &lt;mo&gt;&amp;#xaf;&lt;/mo&gt;
 &lt;/mover&gt;
 </pre>
-    
-     <blockquote>conjugate of z is not  mean of X<br/>
-     z with ¯ above  is not  X with ¯ above</blockquote>
-    </div>
+
+           <blockquote>conjugate of z is not  mean of X<br/>
+               z with ¯ above  is not  X with ¯ above</blockquote>
+       </div>
+
+       <p class="ednote">mathcat gets transpose even without intent; Paul: but it could be wrong!</p>
+
+    <p>MathML intents may lead to the same speech while the notation would be different.
+        (note: Since this sentence is an information about the written style, the above MathML
+        is likely going to generate a speech that is little informative unless the literal pronounciation
+        is activated as is done on the first line)</p>
+       <div class="example mathml mmlcore">
+<pre>
+&lt;math intent=":literal"&gt;
+    &lt;msubsup"&gt;
+        &lt;mi&gt;C&lt;/mi&gt;
+        &lt;mi&gt;k&lt;/mi&gt;
+        &lt;mi&gt;n&lt;/mi&gt;
+    &lt;/msubsup&gt;
+&lt;/math&gt; s'écrit en anglais, généralement, &lt;math intent=":literal"&gt;
+&lt;mrow&gt;
+    &lt;mo&gt;(&lt;/mo&gt;
+    &lt;mtable&gt;
+        &lt;mtr&gt;&lt;mtd&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/mtd&gt;&lt;/mtr&gt;
+        &lt;mtr&gt;&lt;mtd&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/mtd&gt;&lt;/mtr&gt;
+    &lt;/mtable&gt;
+    &lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;/math&gt;
+</pre>
+           <blockquote>
+fr: C indice k et exposant n s'écrit, en anglais, généralement parenthèse tableau  à deux entrées verticales n k
+</blockquote>
+       </div>
+
+       <p>Similarly, the same concepts are written differently in different languages although their intent attributes are the same:</p>
+<div class="example mathml mmlcore"><pre>
+&lt;h3&lt;Half-open Intervals in Three Languages&lt;/h3&lt;
+&lt;p lang="de"&lt;Auf Deutsch:
+  &lt;math intent="open-closed-interval"&lt;
+    &lt;mo&lt;]&lt;/mo&lt;
+    &lt;mi arg="start"&lt;∞&lt;/mi&lt;
+    &lt;mo&lt;,&lt;/mo&lt;
+    &lt;mn arg="end"&lt;0&lt;/mn&lt;
+    &lt;mo&lt;]&lt;/mo&lt;
+  &lt;/math&lt;
+&lt;/p&lt;
+&lt;p lang="de"&lt;In English:
+&lt;math intent="open-closed-interval"
+    &lt;mo&lt;(&lt;/mo&lt;
+    &lt;mi arg="start"&lt;∞&lt;/mi&lt;
+    &lt;mo&lt;,&lt;/mo&lt;
+    &lt;mn arg="end"&lt;0&lt;/mn&lt;
+    &lt;mo&lt;]&lt;/mo&lt;
+&lt;/math&lt;
+&lt;/p&lt;
+&lt;p lang="de"&lt;In het Nederlands:
+&lt;math intent="open-closed-interval"
+    &lt;mo&lt;〈&lt;/mo&lt;
+    &lt;mi arg="start"&lt;∞&lt;/mi&lt;
+    &lt;mo&lt;,&lt;/mo&lt;
+    &lt;mn arg="end"&lt;0&lt;/mn&lt;
+    &lt;mo&lt;]&lt;/mo&lt;
+&lt;/math&lt;
+&lt;/p&lt;
+</pre></div>
+
+
 
    </section>
 
